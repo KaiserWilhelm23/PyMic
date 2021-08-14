@@ -20,7 +20,7 @@ except Exception as e:
     os.system("pip install pygame")
     os.system("pip install gtts")
     
-
+    
 from pygame._sdl2 import get_num_audio_devices, get_audio_device_name
 from pygame import mixer
 mixer.init()
@@ -32,7 +32,8 @@ print("")
 jsongithub_link = "https://blaze005.github.io/items.json"
 with urllib.request.urlopen(jsongithub_link) as url: 
    json_data = json.loads(url.read().decode())
-   message = json_data["message"]
+
+   about_update = json_data["about update"]
    vr = json_data["version"]
    ancmnts = json_data["updates"]
 
@@ -42,11 +43,12 @@ if vr == version:
 
 else:
     print(f"You are behind please update to version: {vr}")
+    print(f"About the new update: {about_update}")
     input("Please press enter to agnoledge this.")
 
 
 print("")
-print(f"Daily Message: {message}")
+print(f"System Message: Working on Update")
 print(f"Creators Corner: {ancmnts}")
 print("")
 print("=="*20)
