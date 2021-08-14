@@ -5,7 +5,7 @@ from os import environ
 environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 
 
-version = 1
+version = 1.1
 
 import urllib.request, json
 
